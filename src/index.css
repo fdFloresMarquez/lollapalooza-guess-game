@@ -1,7 +1,3 @@
-body {
-  background-color: #242424;
-  color: white;
-}
 
 :root {
   font-family: sans-serif;
@@ -13,7 +9,7 @@ body {
 
   color-scheme: light dark;
   color: white;
-  background-color: #242424;
+  background-color: #bbdcff;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,11 +19,16 @@ body {
 }
 
 body {
-  max-width: 640px;
+  background-color: #242424;
+  color: black;
+  background-image: url("background.jpg");
+  max-width: 1024px;
   min-height: 100vh;
   text-align: center;
   padding: 12px;
   margin: auto;
+  justify-content: center;
+  display: flex;
 }
 
 * {
@@ -52,15 +53,21 @@ h1 {
   line-height: 1.5em;
 }
 
-h3 {
-    margin-bottom: 1em;
+.win-card{
+  margin-top: 15em;
+}
+
+.list{
+  margin-top: 12em;
+  max-width: 670px;
 }
 
 .btn {
   border: none;
+  color: black;
   background-color: inherit;
-  font-weight: 500;
-  font-size: 24px;
+  font-weight: 700;
+  font-size: 29px;
   cursor: pointer;
 }
 

@@ -23,22 +23,14 @@ export const Lollapalooza = () => {
 
   return (
     <main className="animate__animated animate__fadeIn">
-      <h1 style={{ display: `${gameCompleted ? 'none' : 'block'}` }}>fakenpalooza</h1>
+      <div className="win-card" style={{ display: `${!gameCompleted ? 'none' : 'block'}` }}>
+        <h1 className="animate__animated animate__fadeInDown">Ganaste!</h1>
+        <h3 className="animate__animated animate__fadeInDown">
+          Acertaste: <p id="points">{pointsCounter}</p> Erraste: <p id="errors">{errorCounter}</p>
+        </h3>
+      </div>
 
-      <h1
-        className="animate__animated animate__fadeInDown"
-        style={{ display: `${!gameCompleted ? 'none' : 'block'}` }}
-      >
-        Ganaste!
-      </h1>
-      <h3
-        className="animate__animated animate__fadeInDown"
-        style={{ display: `${!gameCompleted ? 'none' : 'block'}` }}
-      >
-        Acertaste: <p id="points">{pointsCounter}</p> Erraste: <p id="errors">{errorCounter}</p>
-      </h3>
-
-      <ul>
+      <ul className="list" style={{ display: `${gameCompleted ? 'none' : 'flex'}` }}>
         {shuffledBands.map((band: Band) => (
           <BandListItem key={band.name} {...band} addPoint={addPoint} />
         ))}
