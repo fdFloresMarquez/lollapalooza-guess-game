@@ -21,7 +21,7 @@
 body {
   background-color: #242424;
   color: black;
-  background-image: url("background.jpg");
+  background-image: url("/background.jpg");
   max-width: 1024px;
   min-height: 100vh;
   text-align: center;
